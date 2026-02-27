@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation Red Winter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loading-screen" class="overlay visible">
+    <h1>Operation Red Winter</h1>
+    <p>Loading assets...</p>
+    <div class="bar"><div id="bar-fill"></div></div>
+  </div>
+
+  <div id="main-menu" class="overlay hidden">
+    <h1>Operation Red Winter</h1>
+    <p>Cold-War-era tactical FPS prototype</p>
+    <div class="menu-grid">
+      <button id="play-btn">Deploy</button>
+      <button id="friends-btn">Friends</button>
+      <button id="servers-btn">Servers</button>
+      <button id="store-btn">Store</button>
+    </div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="top-left">HP: <span id="hp">100</span> | Ammo: <span id="ammo">30</span></div>
+    <div class="top-right">Credits: <span id="credits">2500</span> | XP: <span id="xp">0</span></div>
+    <div id="crosshair">+</div>
+    <div class="bottom-left">WASD Move · Mouse Look · LMB Fire · R Reload · Esc Menu</div>
+  </div>
+
+  <div id="friends-modal" class="modal hidden">
+    <h2>Friends</h2>
+    <ul id="friends-list"></ul>
+    <div class="inline">
+      <input id="friend-input" placeholder="Add friend by codename" />
+      <button id="add-friend">Add</button>
+    </div>
+    <button class="close-modal">Close</button>
+  </div>
+
+  <div id="servers-modal" class="modal hidden">
+    <h2>Servers</h2>
+    <ul id="servers-list"></ul>
+    <button class="close-modal">Close</button>
+  </div>
+
+  <div id="store-modal" class="modal hidden">
+    <h2>Store</h2>
+    <p>Cold War Pass — Season 1</p>
+    <p>Price: $9.99 (prototype checkout only)</p>
+    <button id="buy-pass">Buy Season Pass</button>
+    <p id="store-msg"></p>
+    <button class="close-modal">Close</button>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
